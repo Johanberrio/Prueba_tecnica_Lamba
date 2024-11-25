@@ -1,7 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework.test import APITestCase
 from rest_framework import status
-from rest_framework.authtoken.models import Token
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
@@ -9,11 +8,11 @@ User = get_user_model()
 
 class LoginViewTest(APITestCase):
     def setUp(self):
-        self.login_url = "/api/login/"  # Cambia esta URL si es necesario
+        self.login_url = "/api/login/"  
         self.user = User.objects.create_user(username="testuser", password="password123")
 
     def test_login_success(self):
-        """Prueba de inicio de sesión exitoso."""
+        """Successful login test."""
         data = {"username": "testuser", "password": "password123"}
         response = self.client.post(self.login_url, data)
         self.assertEqual(response.status_code, 200)
@@ -22,7 +21,7 @@ class LoginViewTest(APITestCase):
        
 
     def test_login_invalid_credentials(self):
-        """Prueba de inicio de sesión con credenciales inválidas."""
+        """Test login with invalid credentials."""
         data = {"username": "testuser", "password": "wrongpassword"}
         response = self.client.post(self.login_url, data)
         self.assertEqual(response.status_code, 400)
