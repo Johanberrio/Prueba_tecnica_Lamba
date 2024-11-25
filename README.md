@@ -24,49 +24,50 @@ El backend está construido con **Django** y **Django REST Framework**. Sigue es
    ```
 
 
-2. **Crear un entorno virtual (opcional pero recomendado):		**
+2. **Crear un entorno virtual (opcional pero recomendado):**
 
-```bash
-python -m venv venv
-```
+   ```bash
+   python -m venv venv
+   ```
 
 
 3. **Activar el entorno virtual** :
 
-* En Linux/Mac:
-
-```
-source venv/bin/activate
-```
+   * En Linux/Mac:
+   
+   ```
+   source venv/bin/activate
+   ```
 
 * En Windows:
 
-```
-.\venv\Scripts\activate
-
-```
+   ```
+   .\venv\Scripts\activate
+   
+   ```
 
 
 4. **Instalar las dependencias del backend** :
 
-```
-    pip install -r requirements.txt
-```
+   ```
+       pip install -r requirements.txt
+   ```
 
-    5.**Configurar la base de datos** :
-       Django utiliza **SQLite** por defecto. Si prefieres usar otra base de datos, modifica el archivo `settings.py` para configurarla.
+5. **Configurar la base de datos** :
+    
+    Django utiliza **SQLite** por defecto. Si prefieres usar otra base de datos, modifica el archivo `settings.py` para configurarla.
 
     Para usar SQLite, ejecutar las migraciones de la base de datos:
 
-```
-python manage.py migrate 
-```
+   ```
+   python manage.py migrate 
+   ```
 
 6. **Iniciar el servidor de desarrollo** :
 
-```
-    python manage.py runserver
-```
+   ```
+       python manage.py runserver
+   ```
 
 El backend debería estar corriendo en `http://127.0.0.1:8000/`.
 
@@ -80,10 +81,10 @@ El backend debería estar corriendo en `http://127.0.0.1:8000/`.
 
 Luego, en otro terminal, ejecutar Celery:
 
-```
-celery -A backend worker --loglevel=info
-
-```
+   ```
+   celery -A backend worker --loglevel=info
+   
+   ```
 
 
 ## Frontend (React)
@@ -94,24 +95,24 @@ El frontend está construido con **React** y utiliza **Axios** para interactuar 
 
 1. **Acceder a la carpeta del frontend** :
 
-```
-cd ../frontend
+   ```
+   cd ../frontend
+   
+   ```
 
-```
+2. **Instalar las dependencias del frontend**:
 
-**2. I****nstalar las dependencias del frontend:**
+   ```
+   npm install
+   
+   ```
 
-```
-npm install
+3. **Inicia el servidor de desarrollo**:
 
-```
-
-**3. Inicia el servidor de desarrollo** :
-
-```
-npm start
-
-```
+   ```
+   npm start
+   
+   ```
 
 
 ## Rutas API
