@@ -113,7 +113,8 @@ El frontend está construido con **React** y utiliza **Axios** para interactuar 
    npm start
    
    ```
-
+## Configuración de CORS
+   Para permitir que el frontend (en http://localhost:3000) interactúe con el backend (en http://localhost:8000), se ha configurado el middleware de CORS en el archivo settings.py del     backend. Si es necesario, puedes añadir más dominios permitidos en la lista CORS_ALLOWED_ORIGINS.
 
 ## Rutas API
 
